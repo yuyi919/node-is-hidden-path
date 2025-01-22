@@ -61,9 +61,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@napi-rs/package-template@workspace:.":
+"@yuyi919/is-hidden-path@workspace:.":
   version: 0.0.0-use.local
-  resolution: "@napi-rs/package-template@workspace:."
+  resolution: "@yuyi919/is-hidden-path@workspace:."
   dependencies:
     "@napi-rs/cli": "npm:^2.18.4"
     "@swc-node/register": "npm:^1.10.6"

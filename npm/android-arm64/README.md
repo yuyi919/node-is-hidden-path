@@ -1,3 +1,3 @@
-# `@napi-rs/package-template-android-arm64`
+# `@yuyi919/is-hidden-path-android-arm64`
 
-This is the **aarch64-linux-android** binary for `@napi-rs/package-template`
+This is the **aarch64-linux-android** binary for `@yuyi919/is-hidden-path`
