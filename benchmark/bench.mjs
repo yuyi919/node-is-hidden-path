@@ -2,7 +2,9 @@ import { Bench } from 'tinybench'
 
 import { isHiddenFile } from '../index.js'
 
+
 const b = new Bench()
+
 
 b.add('Native isHiddenFileApi', () => {
   isHiddenFile('D:\\AlphaDiscLog.txt')

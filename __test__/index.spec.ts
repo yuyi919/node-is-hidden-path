@@ -1,8 +1,9 @@
 import test from 'ava'
 
-import { plus100 } from '../index'
+import { isHiddenFile } from '../index'
 
 test('sync function from native code', (t) => {
-  const fixture = 42
-  t.is(plus100(fixture), fixture + 100)
+  t.is(isHiddenFile('D:/AlphaDiscLog.txt'), true)
+  t.is(isHiddenFile('D:\\D.zip'), false)
+  t.is(isHiddenFile('D:/workspace'), false)
 })
