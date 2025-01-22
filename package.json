@@ -103,20 +103,5 @@
     "trailingComma": "all",
     "singleQuote": true,
     "arrowParens": "always"
-  },
-  "optionalDependencies": {
-    "@yuyi919/is-hidden-path-win32-x64-msvc": "0.0.1",
-    "@yuyi919/is-hidden-path-darwin-x64": "0.0.1",
-    "@yuyi919/is-hidden-path-linux-x64-gnu": "0.0.1",
-    "@yuyi919/is-hidden-path-linux-x64-musl": "0.0.1",
-    "@yuyi919/is-hidden-path-linux-arm64-gnu": "0.0.1",
-    "@yuyi919/is-hidden-path-win32-ia32-msvc": "0.0.1",
-    "@yuyi919/is-hidden-path-linux-arm-gnueabihf": "0.0.1",
-    "@yuyi919/is-hidden-path-darwin-arm64": "0.0.1",
-    "@yuyi919/is-hidden-path-android-arm64": "0.0.1",
-    "@yuyi919/is-hidden-path-freebsd-x64": "0.0.1",
-    "@yuyi919/is-hidden-path-linux-arm64-musl": "0.0.1",
-    "@yuyi919/is-hidden-path-win32-arm64-msvc": "0.0.1",
-    "@yuyi919/is-hidden-path-android-arm-eabi": "0.0.1"
   }
 }
