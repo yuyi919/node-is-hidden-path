@@ -28,5 +28,5 @@
     "registry": "https://registry.npmjs.org/",
     "access": "public"
   },
-  "repository": "git@github.com:napi-rs/is-hidden-path.git"
+  "repository": "git@github.com:yuyi919/node-is-hidden-path.git"
 }
