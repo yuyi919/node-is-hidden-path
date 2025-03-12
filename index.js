@@ -284,6 +284,8 @@ if (!nativeBinding) {
   throw new Error(`Failed to load native binding`)
 }
 
-const { isHiddenFile } = nativeBinding
+const { isHiddenFile, isHiddenFileWin32, isHiddenFileWin322 } = nativeBinding
 
 module.exports.isHiddenFile = isHiddenFile
+module.exports.isHiddenFileWin32 = isHiddenFileWin32
+module.exports.isHiddenFileWin322 = isHiddenFileWin322

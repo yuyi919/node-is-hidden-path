@@ -1,6 +1,6 @@
 {
   "name": "@yuyi919/is-hidden-path",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Template project for writing node package with napi-rs",
   "main": "index.js",
   "repository": "git@github.com:yuyi919/node-is-hidden-path.git",
@@ -44,7 +44,7 @@
   },
   "scripts": {
     "artifacts": "napi artifacts",
-    "bench": "bun benchmark/bench.mjs",
+    "bench": "node benchmark/bench.mjs",
     "build": "napi build --platform --release",
     "build:debug": "napi build --platform",
     "format": "run-p format:prettier format:rs format:toml",
