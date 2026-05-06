@@ -1,6 +1,6 @@
 import test from 'ava'
 
-import { isHiddenFile, isHiddenFileWin32, isHiddenFileWin322 } from '../index'
+import { isHiddenFile, isHiddenFileWin32, isHiddenFileWin322 } from '@yuyi919/is-hidden-path'
 
 test('sync function from native code', (t) => {
   // console.log(
