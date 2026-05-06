@@ -1,0 +1,31 @@
+{
+  "name": "@napi-rs/cli",
+  "version": "2.18.4",
+  "requiresBuild": false,
+  "files": {
+    "LICENSE": {
+      "checkedAt": 1778089746317,
+      "integrity": "sha512-bSpuYjEOgWtqmZH2wLwVBbs5KP6En4hRpZjjNcDLiDw18NzOZSZkFE18D5NxYkbQ+6rPvrB9sJeK66RPFHeASQ==",
+      "mode": 420,
+      "size": 1066
+    },
+    "scripts/index.js": {
+      "checkedAt": 1778089746330,
+      "integrity": "sha512-SjCnxA4d8NV3HmRD8hTESD3CqRy2eUg361J15L9qlghf/v+5RgyOqFCbUZiyQiIUhIERlkEcNyvQq3GiXDizVQ==",
+      "mode": 493,
+      "size": 5580585
+    },
+    "package.json": {
+      "checkedAt": 1778089746330,
+      "integrity": "sha512-XOtlnhx4trg+cXJ4WFq65RlifEYCoRXE7JWmV3+wTJRzHyk6JVPk75z85Mtc97g1zZHNjN4fK+kwYffe1LZfaQ==",
+      "mode": 420,
+      "size": 1446
+    },
+    "README.md": {
+      "checkedAt": 1778089746330,
+      "integrity": "sha512-18IFkuA8sn9mXieyh6oxbDtB8wWmLx1AkUHlT+rASVytbkMZQzgzhKD3hPM5WlDxo/1jNd4YYmUdFW4gT0yG6Q==",
+      "mode": 420,
+      "size": 2399
+    }
+  }
+}

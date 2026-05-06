@@ -1,0 +1,31 @@
+{
+  "name": "@oxlint/linux-x64-musl",
+  "version": "0.15.0",
+  "requiresBuild": false,
+  "files": {
+    "oxc_language_server": {
+      "checkedAt": 1778089750969,
+      "integrity": "sha512-VhdZIUryaxOAFQd4SlriuI9RbbLwSx34XAO6lFh1FqOJ09pTvM9tEqvD7hDZOXco/LncnXCEkB1v3srfUBbxiw==",
+      "mode": 493,
+      "size": 8972784
+    },
+    "oxlint": {
+      "checkedAt": 1778089750989,
+      "integrity": "sha512-q78zaP/o37UZgoRJ5wiVf9ZE1dWC+1bWtQstlNRF3/iIL5aciWOYcm4GKLdf0fgzVYhyehPqAevQmKri/Xwq7g==",
+      "mode": 493,
+      "size": 9151072
+    },
+    "package.json": {
+      "checkedAt": 1778089750989,
+      "integrity": "sha512-Y/DRVP5ucdX04tZJLYAaX1lVpDomzotYigeZ/azwJ+Px/HqY7ysqVzx8/sZb0zQv8fGmoP6qPKN67QekFebU+g==",
+      "mode": 420,
+      "size": 514
+    },
+    "LICENSE": {
+      "checkedAt": 1778089748683,
+      "integrity": "sha512-v/TzUg0afet1OKcRV49i+hhGBK6kVaz9GyhpHeK6U8mOeQZ9EpcWBOzrYc3ZbdsHOH1EWM4Dzcxdty/qv91wnQ==",
+      "mode": 420,
+      "size": 1119
+    }
+  }
+}

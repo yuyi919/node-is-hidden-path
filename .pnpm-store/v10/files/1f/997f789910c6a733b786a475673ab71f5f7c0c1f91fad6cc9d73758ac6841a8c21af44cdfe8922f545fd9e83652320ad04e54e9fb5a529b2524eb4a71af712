@@ -1,0 +1,39 @@
+{
+  "name": "tinybench",
+  "version": "3.0.0",
+  "type": "module",
+  "volta": {
+    "node": "20.18.0",
+    "pnpm": "9.12.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "publishConfig": {
+    "directory": "package"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "require": {
+      "types": "./dist/index.d.cts",
+      "require": "./dist/index.cjs"
+    },
+    "import": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist/**"
+  ],
+  "repository": "tinylibs/tinybench",
+  "license": "MIT",
+  "keywords": [
+    "benchmark",
+    "tinylibs",
+    "tiny"
+  ],
+  "scripts": {}
+}

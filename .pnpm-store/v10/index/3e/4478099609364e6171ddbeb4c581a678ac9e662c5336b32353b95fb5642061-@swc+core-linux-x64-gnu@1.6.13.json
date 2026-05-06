@@ -1,0 +1,25 @@
+{
+  "name": "@swc/core-linux-x64-gnu",
+  "version": "1.6.13",
+  "requiresBuild": false,
+  "files": {
+    "package.json": {
+      "checkedAt": 1778089747110,
+      "integrity": "sha512-5dqWhaVfgYNM/tRyn1OkkawS3/dcKjvSD1TmokIdg83PF95K5vM00MyF82VHz/JX/nhj9KhzjMJTQ33+ZleXaQ==",
+      "mode": 420,
+      "size": 827
+    },
+    "README.md": {
+      "checkedAt": 1778089747111,
+      "integrity": "sha512-HC6joO3kjyTzzpgzimKjYnGlMp9G3Owaa19+Is4AEEQ3F74OFHzEF+4Y9MgHoLWXn/ubGv5CB2Df5FHtfBa1ZA==",
+      "mode": 420,
+      "size": 93
+    },
+    "swc.linux-x64-gnu.node": {
+      "checkedAt": 1778089747230,
+      "integrity": "sha512-PJ9DTBs/vlMmnZOWsSCV/RtywQ5ZxVaZ3F99itB4i71Uu5vkLRPkmi/KXQeYWKZHwI/grb1/tY9BwitNCzDD9g==",
+      "mode": 420,
+      "size": 51218984
+    }
+  }
+}

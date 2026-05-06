@@ -1,0 +1,37 @@
+{
+  "name": "memoize",
+  "version": "10.0.0",
+  "requiresBuild": false,
+  "files": {
+    "license": {
+      "checkedAt": 1778089745436,
+      "integrity": "sha512-0fM2/ycrxrltyaBKfQ748Ck23VlPUUBgNAR47ldf4B1V/HoXTfWBSk+vcshGKwEpmOynu4mOP5o+hyBfuRNa8g==",
+      "mode": 420,
+      "size": 1117
+    },
+    "dist/index.js": {
+      "checkedAt": 1778089747940,
+      "integrity": "sha512-Xxn4uKeCHve2DKuF1Zm+/AIargdWv1JpmOA1prOaxYVoAkTFOlmvvf5PGmScVMnLTxAC54+XrdIVotpY2SxJiQ==",
+      "mode": 420,
+      "size": 3764
+    },
+    "package.json": {
+      "checkedAt": 1778089747940,
+      "integrity": "sha512-5/eoA8ozCVJEpwbHbz8Wsq4SrDld/gorOOspPZSApbt6X5crA1PErVkjcm4rOUkL0AeI971tIJRn344ZcTfJFw==",
+      "mode": 420,
+      "size": 1456
+    },
+    "readme.md": {
+      "checkedAt": 1778089747941,
+      "integrity": "sha512-Nt2/O6ZKVUFBYDt7MhCNLhsgNjOj64vcuSc+k3RUmJKSAw468tHmYzY2GPHhtloCfxr2VwGkysfUWMuTwaMlZA==",
+      "mode": 420,
+      "size": 8366
+    },
+    "dist/index.d.ts": {
+      "checkedAt": 1778089747941,
+      "integrity": "sha512-iWdgG71momoz78w8p5B6dEmoV7DjUjlAXDP9lI7B5TR7qaztvQwNejaT7iEY2Jhj+ci8rRXBuTuOlwU1gc/H7A==",
+      "mode": 420,
+      "size": 3714
+    }
+  }
+}

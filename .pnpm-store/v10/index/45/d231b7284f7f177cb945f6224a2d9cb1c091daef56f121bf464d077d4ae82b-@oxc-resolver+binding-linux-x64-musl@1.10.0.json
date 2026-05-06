@@ -1,0 +1,25 @@
+{
+  "name": "@oxc-resolver/binding-linux-x64-musl",
+  "version": "1.10.0",
+  "requiresBuild": false,
+  "files": {
+    "package.json": {
+      "checkedAt": 1778089746865,
+      "integrity": "sha512-dVURKtq28Avg7AmeGRLcd2YGp4/VCNZ6Z6GcTteamawgRYH8Or66po0FbytWUSMYde/PLpxVx16lWrTTzJwqFw==",
+      "mode": 420,
+      "size": 548
+    },
+    "README.md": {
+      "checkedAt": 1778089746865,
+      "integrity": "sha512-5gvvUGo8SIbi9VOlCy22QSq7LhmtNp0O9miSiGf3SxGBNWdwx7Z10eQm48eVip9TPAq0DwAFNhuQSYLfml0eBQ==",
+      "mode": 420,
+      "size": 119
+    },
+    "resolver.linux-x64-musl.node": {
+      "checkedAt": 1778089746868,
+      "integrity": "sha512-rFkccvuz1p4pRy3yIgmydYi2czL9lWxfr9JixelXyImHIzvA5Ra0tJ6a1jfDTzzMG0wgHlGXNMZsFTGrK6OCCQ==",
+      "mode": 420,
+      "size": 887832
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "name": "oxlint",
+  "version": "0.15.15",
+  "requiresBuild": false,
+  "files": {
+    "bin/oxc_language_server": {
+      "checkedAt": 1778089880769,
+      "integrity": "sha512-/xBJx4x5z9mPvaR4it7Nt5r6DkmDYQ7OIUCJ9Qgwl0rUFAbS/QUQIANja6iyq2n7+zK55WIBy8T5kLJ5rBFvsw==",
+      "mode": 493,
+      "size": 3486
+    },
+    "bin/oxlint": {
+      "checkedAt": 1778089880770,
+      "integrity": "sha512-HQMstWuzauLXtu6qlAH+n+KKyNht3RkipJqG4+mNeGxHP9xzrOX0BWo1O5G6zxhU8CIB4SpjXFCHKja8m65oqQ==",
+      "mode": 493,
+      "size": 3469
+    },
+    "configuration_schema.json": {
+      "checkedAt": 1778089880770,
+      "integrity": "sha512-urOnlc1OyPOSJve5JeO20gTQqPzj5pTh0/PwrNj+J5MaHbUIPh0Z62u+FgEmFB+9moNK+e3TzZAZFHGOUxz4Kg==",
+      "mode": 420,
+      "size": 18166
+    },
+    "package.json": {
+      "checkedAt": 1778089880771,
+      "integrity": "sha512-ciO/cDIDn9IsFvn9fACceTq9bzR05FuojPf32XWooYtP5Yz0dcgw72sS29uqh2vBV/xSod9RtlBWn9j/fhi9CQ==",
+      "mode": 420,
+      "size": 1069
+    },
+    "README.md": {
+      "checkedAt": 1778089880771,
+      "integrity": "sha512-uBgkfOKSE3g4AmqEKhQECpi+JlCo0YlDFmxZ0e9H6ehD0mXQ+12NZpCt5L+VTyJrccRoeGcbTiWNo6wlwZeA8Q==",
+      "mode": 420,
+      "size": 2092
+    },
+    "LICENSE": {
+      "checkedAt": 1778089880772,
+      "integrity": "sha512-v/TzUg0afet1OKcRV49i+hhGBK6kVaz9GyhpHeK6U8mOeQZ9EpcWBOzrYc3ZbdsHOH1EWM4Dzcxdty/qv91wnQ==",
+      "mode": 420,
+      "size": 1119
+    }
+  }
+}

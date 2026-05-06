@@ -8,13 +8,13 @@
 
 1. Click **Use this template**.
 2. **Clone** your project.
-3. Run `yarn install` to install dependencies.
+3. Run `npm install` to install dependencies.
 4. Run `npx napi rename -n [name]` command under the project folder to rename your package.
 
 ## Install this test package
 
 ```
-yarn add @yuyi919/is-hidden-path
+npm install @yuyi919/is-hidden-path
 ```
 
 ## Support matrix
@@ -41,11 +41,11 @@ yarn add @yuyi919/is-hidden-path
 
 ### Build
 
-After `yarn build/npm run build` command, you can see `package-template.[darwin|win32|linux].node` file in project root. This is the native addon built from [lib.rs](./src/lib.rs).
+After `npm run build` command, you can see `package-template.[darwin|win32|linux].node` file in project root. This is the native addon built from [lib.rs](./src/lib.rs).
 
 ### Test
 
-With [ava](https://github.com/avajs/ava), run `yarn test/npm run test` to testing native addon. You can also switch to another testing framework if you want.
+With [ava](https://github.com/avajs/ava), run `npm run test` to testing native addon. You can also switch to another testing framework if you want.
 
 ### CI
 
@@ -61,19 +61,19 @@ The other problem is how to deliver prebuild `binary` to users. Downloading it i
 
 In this package, we choose a better way to solve this problem. We release different `npm packages` for different platforms. And add it to `optionalDependencies` before releasing the `Major` package to npm.
 
-`NPM` will choose which native package should download from `registry` automatically. You can see [npm](./npm) dir for details. And you can also run `yarn add @yuyi919/is-hidden-path` to see how it works.
+`NPM` will choose which native package should download from `registry` automatically. You can see [npm](./npm) dir for details. And you can also run `npm install @yuyi919/is-hidden-path` to see how it works.
 
 ## Develop requirements
 
 - Install the latest `Rust`
 - Install `Node.js@10+` which fully supported `Node-API`
-- Install `yarn@1.x`
+- Install `npm`
 
 ## Test in local
 
-- yarn
-- yarn build
-- yarn test
+- npm install
+- npm run build
+- npm run test
 
 And you will see:
 

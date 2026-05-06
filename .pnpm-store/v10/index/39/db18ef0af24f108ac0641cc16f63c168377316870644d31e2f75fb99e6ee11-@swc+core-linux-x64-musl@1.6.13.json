@@ -1,0 +1,25 @@
+{
+  "name": "@swc/core-linux-x64-musl",
+  "version": "1.6.13",
+  "requiresBuild": false,
+  "files": {
+    "package.json": {
+      "checkedAt": 1778089747508,
+      "integrity": "sha512-h1i/lIFUTfvTIj3aNkrvLiTRbyB3eT8XyrRDwpNRuWR0C+NP3G+DYBOHQmaBOjKEo7OpUWqACfKyqxEK/j2y8w==",
+      "mode": 420,
+      "size": 829
+    },
+    "README.md": {
+      "checkedAt": 1778089747513,
+      "integrity": "sha512-hgKjWRUzzyu13iuyr1hAT8fIzJANWNwWSCKsEFjSSlgbYGa7RUxCbYvqXsRHKpmexPZB+tMSwxGlkrlH/5wAAg==",
+      "mode": 420,
+      "size": 95
+    },
+    "swc.linux-x64-musl.node": {
+      "checkedAt": 1778089747653,
+      "integrity": "sha512-Szu8s3gjY3/TCdf3Y9Chpiyw7N8+N2zCBBFbCdKdOOq0orbc1fe8CWTPhWIOkGAsLiBXuQf6Ey3ijMXYvsswKQ==",
+      "mode": 420,
+      "size": 63706704
+    }
+  }
+}

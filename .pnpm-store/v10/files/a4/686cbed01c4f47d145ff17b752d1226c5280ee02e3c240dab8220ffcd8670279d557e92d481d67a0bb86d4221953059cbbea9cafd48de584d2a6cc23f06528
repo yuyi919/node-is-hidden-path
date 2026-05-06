@@ -1,0 +1,424 @@
+/**
+ * the task function
+ */
+type Fn = () => unknown | Promise<unknown>;
+interface FnOptions {
+    /**
+     * An optional function that is run before iterations of this task begin
+     */
+    beforeAll?: (this: Task) => void | Promise<void>;
+    /**
+     * An optional function that is run before each iteration of this task
+     */
+    beforeEach?: (this: Task) => void | Promise<void>;
+    /**
+     * An optional function that is run after each iteration of this task
+     */
+    afterEach?: (this: Task) => void | Promise<void>;
+    /**
+     * An optional function that is run after all iterations of this task end
+     */
+    afterAll?: (this: Task) => void | Promise<void>;
+}
+interface Statistics {
+    /**
+     * samples
+     */
+    samples: number[];
+    /**
+     * the minimum value
+     */
+    min: number;
+    /**
+     * the maximum value
+     */
+    max: number;
+    /**
+     * mean/average (estimate of the population mean/average)
+     */
+    mean: number;
+    /**
+     * variance (estimate of the population variance)
+     */
+    variance: number;
+    /**
+     * standard deviation (estimate of the population standard deviation)
+     */
+    sd: number;
+    /**
+     * standard error of the mean/average (a.k.a. the standard deviation of the sampling distribution of the sample mean/average)
+     */
+    sem: number;
+    /**
+     * degrees of freedom
+     */
+    df: number;
+    /**
+     * critical value
+     */
+    critical: number;
+    /**
+     * margin of error
+     */
+    moe: number;
+    /**
+     * relative margin of error
+     */
+    rme: number;
+    /**
+     * mean/average absolute deviation
+     */
+    aad: number | undefined;
+    /**
+     * median absolute deviation
+     */
+    mad: number | undefined;
+    /**
+     * p50/median percentile
+     */
+    p50: number | undefined;
+    /**
+     * p75 percentile
+     */
+    p75: number | undefined;
+    /**
+     * p99 percentile
+     */
+    p99: number | undefined;
+    /**
+     * p995 percentile
+     */
+    p995: number | undefined;
+    /**
+     * p999 percentile
+     */
+    p999: number | undefined;
+}
+/**
+ * the benchmark task result object
+ */
+interface TaskResult {
+    error?: Error;
+    /**
+     * the time to run the task benchmark cycle (ms)
+     */
+    totalTime: number;
+    /**
+     * how long each operation takes (ms)
+     */
+    period: number;
+    /**
+     * the task latency statistics
+     */
+    latency: Statistics;
+    /**
+     * the task throughput statistics
+     */
+    throughput: Statistics;
+    /**
+     * the number of operations per second
+     * @deprecated use `.throughput.mean` instead
+     */
+    hz: number;
+    /**
+     * latency samples (ms)
+     * @deprecated use `.latency.samples` instead
+     */
+    samples: number[];
+    /**
+     * the minimum latency samples value
+     * @deprecated use `.latency.min` instead
+     */
+    min: number;
+    /**
+     * the maximum latency samples value
+     * @deprecated use `.latency.max` instead
+     */
+    max: number;
+    /**
+     * the latency samples mean/average (estimate of the population mean/average)
+     * @deprecated use `.latency.mean` instead
+     */
+    mean: number;
+    /**
+     * the latency samples variance (estimate of the population variance)
+     * @deprecated use `.latency.variance` instead
+     */
+    variance: number;
+    /**
+     * the latency samples standard deviation (estimate of the population standard deviation)
+     * @deprecated use `.latency.sd` instead
+     */
+    sd: number;
+    /**
+     * the latency standard error of the mean (a.k.a. the standard deviation of the sampling distribution of the sample mean/average)
+     * @deprecated use `.latency.sem` instead
+     */
+    sem: number;
+    /**
+     * the latency samples degrees of freedom
+     * @deprecated use `.latency.df` instead
+     */
+    df: number;
+    /**
+     * the latency samples critical value
+     * @deprecated use `.latency.critical` instead
+     */
+    critical: number;
+    /**
+     * the latency samples margin of error
+     * @deprecated use `.latency.moe` instead
+     */
+    moe: number;
+    /**
+     * the latency samples relative margin of error
+     * @deprecated use `.latency.rme` instead
+     */
+    rme: number;
+    /**
+     * the latency samples p75 percentile
+     * @deprecated use `.latency.p75` instead
+     */
+    p75: number;
+    /**
+     * the latency samples p99 percentile
+     * @deprecated use `.latency.p99` instead
+     */
+    p99: number;
+    /**
+     * the latency samples p995 percentile
+     * @deprecated use `.latency.p995` instead
+     */
+    p995: number;
+    /**
+     * the latency samples p999 percentile
+     * @deprecated use `.latency.p999` instead
+     */
+    p999: number;
+}
+/**
+ * Both the `Task` and `Bench` objects extend the `EventTarget` object,
+ * so you can attach a listeners to different types of events
+ * to each class instance using the universal `addEventListener` and
+ * `removeEventListener`
+ */
+/**
+ * Bench events
+ */
+type BenchEvents = 'abort' | 'complete' | 'error' | 'reset' | 'start' | 'warmup' | 'cycle' | 'add' | 'remove';
+type Hook = (task: Task, mode: 'warmup' | 'run') => void | Promise<void>;
+type BenchEvent = Event & {
+    error?: Error;
+    task?: Task;
+};
+type EventListener = (evt: BenchEvent) => void;
+interface BenchEventsMap {
+    abort: EventListener;
+    start: EventListener;
+    complete: EventListener;
+    warmup: EventListener;
+    reset: EventListener;
+    add: EventListener;
+    remove: EventListener;
+    cycle: EventListener;
+    error: EventListener;
+}
+/**
+ * task events
+ */
+type TaskEvents = 'abort' | 'complete' | 'error' | 'reset' | 'start' | 'warmup' | 'cycle';
+interface TaskEventsMap {
+    abort: EventListener;
+    start: EventListener;
+    error: EventListener;
+    cycle: EventListener;
+    complete: EventListener;
+    warmup: EventListener;
+    reset: EventListener;
+}
+interface Options {
+    /**
+     * benchmark name
+     */
+    name?: string;
+    /**
+     * time needed for running a benchmark task (milliseconds) @default 500
+     */
+    time?: number;
+    /**
+     * number of times that a task should run if even the time option is finished @default 10
+     */
+    iterations?: number;
+    /**
+     * function to get the current timestamp in milliseconds
+     */
+    now?: () => number;
+    /**
+     * An AbortSignal for aborting the benchmark
+     */
+    signal?: AbortSignal;
+    /**
+     * Throws if a task fails @default false
+     */
+    throws?: boolean;
+    /**
+     * warmup benchmark @default true
+     */
+    warmup?: boolean;
+    /**
+     * warmup time (milliseconds) @default 100
+     */
+    warmupTime?: number;
+    /**
+     * warmup iterations @default 5
+     */
+    warmupIterations?: number;
+    /**
+     * setup function to run before each benchmark task (cycle)
+     */
+    setup?: Hook;
+    /**
+     * teardown function to run after each benchmark task (cycle)
+     */
+    teardown?: Hook;
+}
+type RemoveEventListenerOptionsArgument = Parameters<typeof EventTarget.prototype.removeEventListener>[2];
+type AddEventListenerOptionsArgument = Parameters<typeof EventTarget.prototype.addEventListener>[2];
+
+/**
+ * A class that represents each benchmark task in Tinybench. It keeps track of the
+ * results, name, Bench instance, the task function and the number times the task
+ * function has been executed.
+ */
+declare class Task extends EventTarget {
+    bench: Bench;
+    /**
+     * Task name
+     */
+    name: string;
+    /**
+     * The task function
+     */
+    readonly fn: Fn;
+    /**
+     * The task synchronous status
+     */
+    readonly async: boolean;
+    runs: number;
+    /**
+     * The result object
+     */
+    result?: Readonly<TaskResult>;
+    /**
+     * Task options
+     */
+    opts: FnOptions;
+    constructor(bench: Bench, name: string, fn: Fn, opts?: FnOptions);
+    private benchmark;
+    /**
+     * warmup the current task
+     * @internal
+     */
+    warmup(): Promise<void>;
+    /**
+     * run the current task and write the results in `Task.result` object property
+     * @internal
+     */
+    run(): Promise<Task>;
+    addEventListener<K extends TaskEvents>(type: K, listener: TaskEventsMap[K], options?: AddEventListenerOptionsArgument): void;
+    removeEventListener<K extends TaskEvents>(type: K, listener: TaskEventsMap[K], options?: RemoveEventListenerOptionsArgument): void;
+    /**
+     * change the result object values
+     */
+    private setResult;
+    /**
+     * reset the task to make the `Task.runs` a zero-value and remove the `Task.result` object property
+     * @internal
+     */
+    reset(): void;
+}
+
+/**
+ * The Benchmark instance for keeping track of the benchmark tasks and controlling
+ * them.
+ */
+declare class Bench extends EventTarget {
+    /**
+     * @private the task map
+     */
+    private readonly _tasks;
+    name?: string;
+    /**
+     * Executes tasks concurrently based on the specified concurrency mode.
+     *
+     * - When `mode` is set to `null` (default), concurrency is disabled.
+     * - When `mode` is set to 'task', each task's iterations (calls of a task function) run concurrently.
+     * - When `mode` is set to 'bench', different tasks within the bench run concurrently. Concurrent cycles.
+     */
+    concurrency: 'task' | 'bench' | null;
+    /**
+     * The maximum number of concurrent tasks to run @default Number.POSITIVE_INFINITY
+     */
+    threshold: number;
+    signal?: AbortSignal;
+    throws: boolean;
+    warmup: boolean;
+    warmupTime: number;
+    warmupIterations: number;
+    time: number;
+    iterations: number;
+    now: () => number;
+    setup: Hook;
+    teardown: Hook;
+    constructor(options?: Options);
+    /**
+     * warmup the benchmark tasks.
+     */
+    private warmupTasks;
+    /**
+     * run the added tasks that were registered using the {@link add} method.
+     */
+    run(): Promise<Task[]>;
+    /**
+     * reset each task and remove its result
+     */
+    reset(): void;
+    /**
+     * add a benchmark task to the task map
+     */
+    add(name: string, fn: Fn, opts?: FnOptions): this;
+    /**
+     * remove a benchmark task from the task map
+     */
+    remove(name: string): this;
+    addEventListener<K extends BenchEvents>(type: K, listener: BenchEventsMap[K], options?: AddEventListenerOptionsArgument): void;
+    removeEventListener<K extends BenchEvents>(type: K, listener: BenchEventsMap[K], options?: RemoveEventListenerOptionsArgument): void;
+    /**
+     * table of the tasks results
+     */
+    table(convert?: (task: Task) => Record<string, string | number> | undefined): (Record<string, string | number> | undefined | null)[];
+    /**
+     * (getter) tasks results as an array
+     */
+    get results(): (Readonly<TaskResult> | undefined)[];
+    /**
+     * (getter) tasks as an array
+     */
+    get tasks(): Task[];
+    /**
+     * get a task based on the task name
+     */
+    getTask(name: string): Task | undefined;
+}
+
+/**
+ * Converts nanoseconds to milliseconds.
+ *
+ * @param ns - the nanoseconds to convert
+ * @returns the milliseconds
+ */
+declare const nToMs: (ns: number) => number;
+declare const hrtimeNow: () => number;
+declare const now: () => number;
+
+export { Bench, type BenchEvent, type BenchEvents, type Fn, type Hook, type Options, Task, type TaskEvents, type TaskResult, hrtimeNow, nToMs, now };

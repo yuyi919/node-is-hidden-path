@@ -1,0 +1,37 @@
+{
+  "name": "oxc-resolver",
+  "version": "1.10.0",
+  "requiresBuild": false,
+  "files": {
+    "browser.js": {
+      "checkedAt": 1778089745401,
+      "integrity": "sha512-5V97/C5/rqQEAKngixtQzzrOGwjKIAMHRa7wMh38u4c6HSuTp6coyeh3SMB/TPJ8ckMP1joQmbBmOJmdYYxQxw==",
+      "mode": 420,
+      "size": 50
+    },
+    "index.js": {
+      "checkedAt": 1778089745402,
+      "integrity": "sha512-lJgLSVV3oDfj+u88pOhyZZKoWzOTUt0ULLnTR+Dt1QuKLKuPfv6uDiwEh9Ad6JuAlyv0UIrKuT9qBjVfk/1r9A==",
+      "mode": 420,
+      "size": 9246
+    },
+    "package.json": {
+      "checkedAt": 1778089745402,
+      "integrity": "sha512-tvqdAdCpZsO690TWGSEy61ohT6OVIgbeqjb7+Egfv8+MYd9Fs4eh84m7zRjYD7LtQhiVaKemA3SxHrrl9qfaow==",
+      "mode": 420,
+      "size": 1620
+    },
+    "README.md": {
+      "checkedAt": 1778089745402,
+      "integrity": "sha512-W3xBLROP8ySTtUYt00n/riMSGqg6OgU1l/hLUXujT6+o3sYF/SatZuMv232V/oLi8Tj/PVLX6P4qHJAkRtgjtQ==",
+      "mode": 420,
+      "size": 1139
+    },
+    "index.d.ts": {
+      "checkedAt": 1778089745403,
+      "integrity": "sha512-s3wHhuhT90aqsBatuOCTB2dh/z3tEJUHvCytGjRPZpXMyMRGeOyU4S25xB6izL6cblpqjqIcnm/rSgInRQXXLA==",
+      "mode": 420,
+      "size": 7432
+    }
+  }
+}
